@@ -29,7 +29,6 @@ public class EcouteurListeComptes extends MouseAdapter {
                 String selection = String.valueOf(((JList<?>) src).getSelectedValue());
                 String typeCompteBancaireSelection = selection.substring(selection.indexOf("[")+1, selection.indexOf("]")).toLowerCase();
                 client.envoyer("SELECT "+typeCompteBancaireSelection);
-                System.out.println("Compte selectionne:  "+ typeCompteBancaireSelection);
             }
         }
     }

@@ -63,7 +63,7 @@ public class EcouteurOperationsCompte implements ActionListener {
         if(e.getActionCommand().equals("deposer")){
             String montant = pdo.getJTFDepot().getText();
             try{
-                Integer.parseInt(montant);
+                Double.parseDouble(montant);
                 client.envoyer("DEPOT "+montant);
                 pdo.getJTFDepot().setText("");
             } catch (Exception ex) {
@@ -74,7 +74,7 @@ public class EcouteurOperationsCompte implements ActionListener {
         if(e.getActionCommand().equals("retirer")){
             String montant = pdo.getJTFRetrait().getText();
             try{
-                Integer.parseInt(montant);
+                Double.parseDouble(montant);
                 client.envoyer("RETRAIT "+montant);
                 pdo.getJTFRetrait().setText("");
             } catch (Exception ex) {
@@ -87,7 +87,7 @@ public class EcouteurOperationsCompte implements ActionListener {
             String montant = pdo.getJTFTransfer().getText();
             String compte = pdo.getJTFNumeroCompte().getText();
             try {
-                Integer.parseInt(montant);
+                Double.parseDouble(montant);
                 client.envoyer("TRANSFER " + montant + " " + compte);
                 pdo.getJTFTransfer().setText("");
                 pdo.getJTFNumeroCompte().setText("");
@@ -101,7 +101,7 @@ public class EcouteurOperationsCompte implements ActionListener {
             String numFacture = pdo.getJTFNumFacture().getText();
             String descFacture = pdo.getJTFDescription().getText();
             try {
-                Integer.parseInt(montant);
+                Double.parseDouble(montant);
                 client.envoyer("FACTURE " + montant + " " + numFacture+" "+ descFacture);
                 pdo.getJTFFacture().setText("");
                 pdo.getJTFNumFacture().setText("");
