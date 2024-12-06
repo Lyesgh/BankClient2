@@ -67,8 +67,6 @@ public class EcouteurMenuPrincipal implements ActionListener {
                                     break;
                                 } catch (Exception e) {
                                     res = JOptionPane.showConfirmDialog(fenetre, panConfServeur, "Configuration serveur", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
-                                    System.out.println(panConfServeur.getAdresseServeur());
-                                    System.out.println(panConfServeur.getPortServeur());
                                 }
                             }
                         }

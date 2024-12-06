@@ -163,8 +163,6 @@ public class GestionnaireEvenementClient2 implements GestionnaireEvenement {
                 case "HIST":
                     arg = evenement.getArgument();
                     panneauPrincipal.getPhr().getZoneHist().setText(arg);
-                    System.out.println("la taille du panneau : "+ panneauPrincipal.getPhr().getSize());
-                    System.out.println("la taille du panneau : "+ panneauPrincipal.getPhr().getSize());
 
                     JOptionPane.showMessageDialog(panneauPrincipal, panneauPrincipal.getPhr(), "Historique Des Opérations:", JOptionPane.OK_OPTION | JOptionPane.PLAIN_MESSAGE);
                     break;

@@ -17,6 +17,9 @@ public class PanneauDesOperations extends JPanel {
         this.setBackground(Color.GRAY);
         this.setLayout(card);
 
+        vide = new JPanel();
+        this.add(vide, "vide");
+
         //panneau pour depot
         gbl = new GridBagLayout();
         cons = new GridBagConstraints();
@@ -150,9 +153,6 @@ public class PanneauDesOperations extends JPanel {
         this.add(facturePan,"facture");
         ////Fin facturePan
 
-
-        vide = new JPanel();
-        this.add(vide, "vide");
     }
     public void setEcouteur(ActionListener ecouteur){
         validerDepot.addActionListener(ecouteur);
